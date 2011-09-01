@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-DEVICE=shooter
+DEVICE=pyramid
 
 mkdir -p ../../../vendor/htc/$DEVICE
 
