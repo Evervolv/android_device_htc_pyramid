@@ -49,6 +49,7 @@ adb pull /system/xbin/wireless_modem ../../../vendor/htc/$DEVICE/proprietary
 
 adb pull /system/etc/agps_rm ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/vpimg ../../../vendor/htc/$DEVICE/proprietary
+adb pull /system/etc/thermald.conf ../../../vendor/htc/$DEVICE/proprietary
 
 adb pull /system/lib/egl/libEGL_adreno200.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/egl/libGLESv1_CM_adreno200.so ../../../vendor/htc/$DEVICE/proprietary
