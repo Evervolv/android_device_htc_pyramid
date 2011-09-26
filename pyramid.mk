@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2011 Xboarder56
+# Copyright (C) 2011 The Evervolv Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -40,13 +40,13 @@ $(call inherit-product-if-exists, vendor/htc/pyramid/pyramid-vendor.mk)
 
 ## (3)  Finally, the least specific parts, i.e. the non-GSM-specific aspects
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.com.google.clientidbase=android-htc \
+    	ro.com.google.clientidbase=android-htc \
 	ro.com.google.locationfeatures=1 \
- 	ro.com.google.networklocation=1 \
- 	ro.com.google.gmsversion=2.3_r3 \
 	ro.setupwizard.enable_bypass=1 \
+	ro.media.dec.jpeg.memcap=20000000 \
 	dalvik.vm.lockprof.threshold=500 \
 	dalvik.vm.dexopt-flags=m=y \
+	ro.opengles.version=131072
 
 DEVICE_PACKAGE_OVERLAYS += device/htc/pyramid/overlay
 
@@ -63,17 +63,18 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
 PRODUCT_PACKAGES += \
+    librs_jni \
+    libOmxVenc \
+    libOmxVdec \
+    com.android.future.usb.accessory
 #    gps.pyramid \
 #    librs_jni \
 #    gralloc.msm8660 \
 #    copybit.msm8660 \
 #    overlay.default \
-    librs_jni \
 #    libOmxCore \
-    libOmxVenc \
-    libOmxVdec \
 #    libaudio \
-    com.android.future.usb.accessory
+
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
@@ -94,6 +95,7 @@ PRODUCT_COPY_FILES += \
     device/htc/pyramid/firmware/vidc_1080p.fw:system/etc/firmware/vidc_1080p.fw \
     device/htc/pyramid/firmware/leia_pfp_470.fw:system/etc/firmware/leia_pfp_470.fw \
     device/htc/pyramid/firmware/leia_pm4_470.fw:system/etc/firmware/leia_pm4_470.fw
+    
     
 # Audio DSP Profiles
 PRODUCT_COPY_FILES += \
@@ -133,8 +135,8 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 PRODUCT_LOCALES += hdpi
 
 PRODUCT_COPY_FILES += \
-    device/htc/pyramid/vold.fstab:system/etc/vold.fstab
-
+    device/htc/pyramid/vold.fstab:system/etc/vold.fstab \
+    device/htc/pyramid/apns-conf.xml:system/etc/apns-conf.xml
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
@@ -163,5 +165,5 @@ $(call inherit-product, build/target/product/full_base.mk)
 
 PRODUCT_NAME := HTC Pyramid
 PRODUCT_DEVICE := pyramid
-PRODUCT_MODEL := HTC Sensation
+PRODUCT_MODEL := HTC Sensation 4g
 PRODUCT_MANUFACTURER := HTC

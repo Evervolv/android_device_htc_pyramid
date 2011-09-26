@@ -58,7 +58,8 @@ BOARD_HAVE_FM_RADIO := true
 BOARD_GLOBAL_CFLAGS += -DHAVE_FM_RADIO
 BOARD_USE_BROADCOM_FM_VOLUME_HACK := true
 
-BOARD_HAVE_SQN_WIMAX := true
+# Use nasty hack to make Kineto work
+BOARD_USE_KINETO_COMPATIBILITY := true
 
 TARGET_BOOTLOADER_BOARD_NAME := pyramid
 
@@ -78,7 +79,7 @@ TARGET_HAVE_HDMI_OUT := true
 TARGET_HARDWARE_3D := true
 
 # Define Prebuilt kernel locations
-TARGET_PREBUILT_KERNEL := device/htc/shooter/kernel
+TARGET_PREBUILT_KERNEL := device/htc/pyramid/kernel
 
 # cat /proc/emmc
 dev:        size     erasesize name
