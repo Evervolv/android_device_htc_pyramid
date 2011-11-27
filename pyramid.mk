@@ -37,7 +37,7 @@ PRODUCT_COPY_FILES += \
 
 #Add toushcreen config file
 PRODUCT_COPY_FILES += \
-    device/htc/shooter/cy8c-touchscreen.idc:system/usr/idc/cy8c-touchscreen.idc
+    device/htc/pyramid/cy8c-touchscreen.idc:system/usr/idc/cy8c-touchscreen.idc
 
 ## (2) Also get non-open-source GSM-specific aspects if available
 $(call inherit-product-if-exists, vendor/htc/pyramid/pyramid-vendor.mk)
