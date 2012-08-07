@@ -64,6 +64,7 @@ on emmc-fs
 
     mkdir /vendor/etc 0771 system system
     symlink /system/vendor/etc/audio_effects.conf /vendor/etc/audio_effects.conf
+    symlink /system/vendor/etc/audio_policy.conf /vendor/etc/audio_policy.conf
 
 on post-fs-data
     # double check the perms and set owner

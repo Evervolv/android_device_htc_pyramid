@@ -27,6 +27,9 @@
 # inherit from common msm8660
 -include device/htc/msm8660-common/BoardConfigCommon.mk
 
+# Audio
+BOARD_HAVE_HTC_AUDIO := true
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := pyramid
 
@@ -36,6 +39,7 @@ BOARD_KERNEL_PAGE_SIZE := 2048
 BOARD_KERNEL_CMDLINE := console=ttyHSL0 androidboot.hardware=pyramid no_console_suspend=1
 TARGET_PREBUILT_KERNEL := device/htc/pyramid/prebuilt/kernel
 
+# Wifi
 WIFI_DRIVER_MODULE_NAME          := bcmdhd
 WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/bcmdhd.ko"
 
