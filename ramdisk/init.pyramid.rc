@@ -3,6 +3,7 @@ import init.pyramid.usb.rc
 on early-init
     mkdir /storage 0050 system sdcard_r
     mkdir /storage/sdcard0 0000 system system
+    mkdir /storage/usbdisk 0775 system system
 
     # for backwards compatibility
     symlink /storage/sdcard0 /sdcard
