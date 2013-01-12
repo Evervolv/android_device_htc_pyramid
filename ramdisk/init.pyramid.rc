@@ -63,6 +63,9 @@ on fs
     symlink /system/vendor/firmware/fw_bcmdhd_p2p.bin /vendor/firmware/fw_bcmdhd_p2p.bin
     symlink /system/vendor/firmware/bcm4329.hcd /vendor/firmware/bcm4329.hcd
 
+    # TEMP HACK 
+    symlink /system/vendor/lib /vendor/lib
+
     mkdir /vendor/etc 0771 system system
     symlink /system/vendor/etc/audio_effects.conf /vendor/etc/audio_effects.conf
     symlink /system/vendor/etc/audio_policy.conf /vendor/etc/audio_policy.conf
