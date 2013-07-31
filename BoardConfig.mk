@@ -55,6 +55,9 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := pyramid
 # RIL
 BOARD_USE_NEW_LIBRIL_HTC := true
 
+# Recovery
+TARGET_RECOVERY_FSTAB := device/htc/pyramid/ramdisk/fstab.pyramid
+
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
