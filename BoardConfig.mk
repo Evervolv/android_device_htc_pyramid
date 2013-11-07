@@ -36,6 +36,9 @@ BOARD_HAVE_HTC_AUDIO := true
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := pyramid
 
+# Graphics
+TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
+
 # Kernel [Settings]
 BOARD_KERNEL_BASE := 0x48000000
 BOARD_KERNEL_PAGE_SIZE := 2048
@@ -57,6 +60,7 @@ BOARD_USE_NEW_LIBRIL_HTC := true
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/htc/pyramid/ramdisk/fstab.pyramid
+USE_SET_METADATA := false
 
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
